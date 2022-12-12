@@ -1,8 +1,8 @@
 ﻿
-int [,] array1 = Array(4,4);
+int [,] array1 = Array(5,7);
 ArrayOutput(array1);
 System.Console.WriteLine();
-int [] aarr = AvgArrayColumn(array1);
+double [] aarr = AvgArrayColumn(array1);
 Console.WriteLine(String.Join(" ", aarr));
 
 
@@ -25,12 +25,12 @@ void ArrayOutput(int [,] array){
         System.Console.WriteLine();
     }
 }
-int [] AvgArrayColumn(int [,] array){
-    int [] avg = new int [array.GetLength(1)];
-    int sum =0;
+double [] AvgArrayColumn(int [,] array){
+    double [] avg = new double [array.GetLength(1)];
+    double sum =0;
     
-    for(int i =0; i<array.GetLength(0); i++){
-        for (int j=0; j<array.GetLength(1); j++){
+    for(int i =0; i<array.GetLength(1); i++){
+        for (int j=0; j<array.GetLength(0); j++){
             sum += array[j,i];
            
         }
